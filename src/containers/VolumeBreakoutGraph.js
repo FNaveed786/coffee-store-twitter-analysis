@@ -30,6 +30,7 @@ class VolumeBreakoutGraph extends Component {
             }
         }
     }
+    
 
     onEpisodeSelect(episode) {
         let breakouts = this.props.volumeData.breakouts;
