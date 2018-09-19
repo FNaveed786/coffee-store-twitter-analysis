@@ -1,0 +1,55 @@
+.rect {
+    opacity: 0;
+}
+
+.rect-selected {
+    opacity: 0.1;
+    fill: red;
+}
+
+.rect-hovered {
+    opacity: 0.1;
+    fill: blue;
+}
+
+.issue-selected {
+    opacity: 0.5;
+}
+
+.loader {
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
+.url {
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.axis {
+    font-size: 13px;
+}
+
+.border-top-0 {
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: #337AB7;
+}
+
+.border-right {
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: #337AB7;
+}
+
+.border-left {
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: #337AB7;
+}

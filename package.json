@@ -1,0 +1,38 @@
+{
+  "name": "d3-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "d3": "^4.9.1",
+    "elasticsearch": "^13.0.1",
+    "halogen": "^0.2.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.22.2",
+    "react": "^15.5.4",
+    "react-addons-update": "^15.6.0",
+    "react-d3-cloud": "^0.6.0",
+    "react-dom": "^15.5.4",
+    "react-facebook": "^4.0.14",
+    "react-google-charts": "^1.5.5",
+    "react-redux": "^5.0.5",
+    "react-spinkit": "^3.0.0",
+    "react-spinner": "^0.2.7",
+    "react-widgets": "^4.4.4",
+    "react-widgets-moment": "^4.0.20",
+    "redux": "^3.6.0",
+    "redux-form": "^6.8.0",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
