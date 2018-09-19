@@ -30,7 +30,7 @@ class VolumeBreakoutGraph extends Component {
             }
         }
     }
-    
+
 
     onEpisodeSelect(episode) {
         let breakouts = this.props.volumeData.breakouts;
@@ -70,6 +70,12 @@ class VolumeBreakoutGraph extends Component {
                         </strong>
                     </div>
                     <div className="panel-body">
+                    <div id="legend2">
+                       <div className="legend2"> <p className="country-name"><span className="key-dot sb"></span>Starbucks</p> </div>
+                       <div className="legend2"> <p className="country-name"><span className="key-dot dd"></span>Dunkin Donuts</p> </div>
+                       <div className="legend2"> <p className="country-name"><span className="key-dot db"></span>Dutch Bros</p> </div>
+                       <div className="legend2"> <p className="country-name"><span className="key-dot mc"></span>McDonalds</p> </div>
+                      </div>
                         <div id="volumeBreakoutChart" ref="volumeBreakoutChart" style={{ "height": "500px", width: "100%" }}></div>
                     </div>
                 </div>

@@ -20,3 +20,27 @@ body {
     -moz-box-shadow: 5px 5px 16px -2px rgba(0, 0, 0, 0.75);
     box-shadow: 5px 5px 16px -2px rgba(0, 0, 0, 0.75);
 }
+
+#legend2{
+    overflow:hidden;
+}
+.legend2 {
+    float:left;
+    margin-right: 1em;
+}
+
+.sb { background: black;}
+.dd { background: pink;}
+.db { background: blue;}
+.mc { background: orange;}
+
+/*HTML Horizonal Legend*/
+.country-name {
+    margin: 0 !important;
+}
+.key-dot {
+    display: inline-block;
+    height: 10px;
+    margin-right: .5em;
+    width: 10px;
+}

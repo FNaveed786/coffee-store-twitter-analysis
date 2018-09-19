@@ -1,6 +1,7 @@
 import elasticsearch from 'elasticsearch';
 import _ from 'lodash';
 import moment from 'moment';
+import VOLUME_DATA from 'volumeData';
 
 import { getWordCloudDataRequest, getVolumeData} from '../api/requests';
 
@@ -55,6 +56,12 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
     return dispatch => {
         dispatch(requestTotalVolumeData());
         // client.search(getIntervalData(timeSpanStart, timeSpanEnd), (error, response) => {
+        //
+        //   timeSpanData['startDate'] = new Date(new Date(startDate).setHours(0,0,0,0))
+        //   timeSpanData['endDate'] = new Date(new Date(endDate).setHours(0,0,0,0))
+        //   timeSpanData['breakouts'] = getDates(timeSpanData['startDate'], timeSpanData['endDate'])
+        //   timeSpanData['data']
+        //
         //     let intervalsEndBucket = response.aggregations.interval_end.buckets;
         //     let actualTimeSpanEndDate = _.max(intervalsEndBucket.map(a => new Date(a.key_as_string)));
         //     let actualTimeSpanStartDate = _.min(intervalsEndBucket.map(a => new Date(a.interval_start.buckets[0].key_as_string)));
@@ -69,78 +76,17 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
         //     });
         // });
 
+
         timeSpanData['startDate'] = new Date(new Date(startDate).setHours(0,0,0,0))
         timeSpanData['endDate'] = new Date(new Date(endDate).setHours(0,0,0,0))
         timeSpanData['breakouts'] = getDates(timeSpanData['startDate'], timeSpanData['endDate'])
-        //timeSpanData['breakouts'][0] = timeSpanData['startDate']
         console.log("START DATE")
         console.log(timeSpanData['startDate'])
         console.log("END DATE")
         console.log(timeSpanData['endDate'])
         console.log("DATES IN BETWEEN")
         console.log(timeSpanData['breakouts'])
-        timeSpanData['data'] = [
-          {
-            'company': 'Starbucks',
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 10},
-              {'date': new Date(2018, 8, 17), 'volume': 20},
-              {'date': new Date(2018, 8, 18), 'volume': 5},
-              {'date': new Date(2018, 8, 19), 'volume': 8},
-              {'date': new Date(2018, 8, 20), 'volume': 30},
-              {'date': new Date(2018, 8, 21), 'volume': 32},
-              {'date': new Date(2018, 8, 22), 'volume': 25},
-              {'date': new Date(2018, 8, 23), 'volume': 20},
-              {'date': new Date(2018, 8, 24), 'volume': 12},
-              {'date': new Date(2018, 8, 25), 'volume': 10}
-            ],
-            'dots': [
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 16), 'volume': 20, 'sentiment': 'green'},
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 21), 'volume': 32, 'sentiment': 'green'},
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 22), 'volume': 25, 'sentiment': 'red'}
-            ]
-          },
-          {
-            'company': "Dutch Bros",
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 20},
-              {'date': new Date(2018, 8, 17), 'volume': 10},
-              {'date': new Date(2018, 8, 18), 'volume': 15},
-              {'date': new Date(2018, 8, 19), 'volume': 18},
-              {'date': new Date(2018, 8, 20), 'volume': 10},
-              {'date': new Date(2018, 8, 21), 'volume': 12},
-              {'date': new Date(2018, 8, 22), 'volume': 35},
-              {'date': new Date(2018, 8, 23), 'volume': 10},
-              {'date': new Date(2018, 8, 24), 'volume': 12},
-              {'date': new Date(2018, 8, 25), 'volume': 14}
-            ],
-            'dots': [
-              {'company': "Dutch Bros", 'date': new Date(2018, 8, 19), 'volume': 18, 'sentiment': 'red'},
-              {'company': "Dutch Bros", 'date': new Date(2018, 8, 25), 'volume': 14, 'sentiment': 'red'},
-            ]
-          },
-          {
-            'company': 'Dunkin Donuts',
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 20},
-              {'date': new Date(2018, 8, 17), 'volume': 30},
-              {'date': new Date(2018, 8, 18), 'volume': 25},
-              {'date': new Date(2018, 8, 19), 'volume': 8},
-              {'date': new Date(2018, 8, 20), 'volume': 19},
-              {'date': new Date(2018, 8, 21), 'volume': 14},
-              {'date': new Date(2018, 8, 22), 'volume': 25},
-              {'date': new Date(2018, 8, 23), 'volume': 20},
-              {'date': new Date(2018, 8, 24), 'volume': 19},
-              {'date': new Date(2018, 8, 25), 'volume': 12}
-            ],
-            'dots': [
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 17), 'volume': 30, 'sentiment': 'red'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 20), 'volume': 19, 'sentiment': 'gray'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 21), 'volume': 14, 'sentiment': 'green'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 24), 'volume': 19, 'sentiment': 'red'},
-            ]
-          }
-        ]
+        timeSpanData['data'] = VOLUME_DATA
         dispatch(receiveTotalVolumeData(timeSpanData));
     }
 }

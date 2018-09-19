@@ -34,35 +34,25 @@ export const getWordCloudDataRequest = (curIntervalEndDate, prevIntervalEndDate)
     }
 }
 
-export const getVolumeData = (intervalStart, intervalEnd) => {
+export const getVolumeData = (start, end, companies) => {
     return {
-        "index": 'POSTS_INDEX_NAME',
-        "type": 'POSTS_INDEX_TYPE',
-        "body": {
-            "size": 0,
-            "query": {
-                "range": {
-                    "createtime": {
-                        "gte": intervalStart,
-                        "lte": intervalEnd
-                    }
-                }
-            },
-            "aggs": {
-                "volume": {
-                    "date_histogram": {
-                        "field": "createtime",
-                        "interval": "day"
-                    },
-                    "aggs": {
-                        "likes": {
-                            "sum": {
-                                "field": "likes_count"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+     "query": {
+       "bool": {
+         "must": [
+           {
+             "bool": {
+             "should": companies
+           }},
+           {
+             "range": {
+               "date": {
+                 "gte": start,
+                 "lte": end
+               }
+             }
+           }]
+           }
+
+       }
+     }
 }
