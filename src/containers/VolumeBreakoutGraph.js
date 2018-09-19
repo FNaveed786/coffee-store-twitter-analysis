@@ -47,7 +47,7 @@ class VolumeBreakoutGraph extends Component {
       console.log("ON DOT SELECT")
       console.log(date)
       console.log(company)
-        //this.props.fetchWordCloudData(date, company);
+      this.props.fetchWordCloudData(date, company);
     }
 
     onEpisodeDeselect() {

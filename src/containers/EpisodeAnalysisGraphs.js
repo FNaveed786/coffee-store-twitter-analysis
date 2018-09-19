@@ -22,7 +22,7 @@ class EpisodeAnalysis extends Component {
         { text: 'duck', value: 10 },
         ];
 
-        const fontSizeMapper = word => Math.log2(word.value) * 5;
+        const fontSizeMapper = word => Math.log2(word.value) * 2;
         const rotate = word => word.value % 360;
         const { selectedEpisode } = this.props.episodeReducer;
 
@@ -39,7 +39,9 @@ class EpisodeAnalysis extends Component {
         let rows = []
         for (var i = 1; i < wordcloudData.length; i++) {
             rows.push(<div className="col-lg-4">
-            <div>{wordcloudData[i].title}</div>
+            <div
+              style={{ align: 'center', fontWeight: 'bold', fontSize: 20}}
+            >{wordcloudData[i].title}</div>
               <WordCloud
                 data={wordcloudData[i].words}
                 fontSizeMapper={fontSizeMapper}
@@ -61,7 +63,9 @@ class EpisodeAnalysis extends Component {
                     <div className="panel-body">
                         <div className="col-lg-12">
                             <div className="col-lg-4" ref="testing1">
-                            <div>{wordcloudData[0].title}</div>
+                            <div
+                            style={{ align: 'center', fontWeight: 'bold', fontSize: 20}}
+                            >{wordcloudData[0].title}</div>
                               <WordCloud
                                 data={wordcloudData[0].words}
                                 fontSizeMapper={fontSizeMapper}

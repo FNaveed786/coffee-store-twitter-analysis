@@ -77,8 +77,8 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
         // });
 
 
-        timeSpanData['startDate'] = new Date(new Date(startDate).setHours(0,0,0,0))
-        timeSpanData['endDate'] = new Date(new Date(endDate).setHours(0,0,0,0))
+        timeSpanData['startDate'] = new Date(2018, 8, 20)
+        timeSpanData['endDate'] = new Date(2018, 8, 27)
         timeSpanData['breakouts'] = getDates(timeSpanData['startDate'], timeSpanData['endDate'])
         console.log("START DATE")
         console.log(timeSpanData['startDate'])
@@ -86,68 +86,81 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
         console.log(timeSpanData['endDate'])
         console.log("DATES IN BETWEEN")
         console.log(timeSpanData['breakouts'])
-        timeSpanData['data'] = [
-          {
-            'company': 'Starbucks',
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 10},
-              {'date': new Date(2018, 8, 17), 'volume': 20},
-              {'date': new Date(2018, 8, 18), 'volume': 5},
-              {'date': new Date(2018, 8, 19), 'volume': 8},
-              {'date': new Date(2018, 8, 20), 'volume': 30},
-              {'date': new Date(2018, 8, 21), 'volume': 32},
-              {'date': new Date(2018, 8, 22), 'volume': 25},
-              {'date': new Date(2018, 8, 23), 'volume': 20},
-              {'date': new Date(2018, 8, 24), 'volume': 12},
-              {'date': new Date(2018, 8, 25), 'volume': 10}
-            ],
-            'dots': [
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 16), 'volume': 20, 'sentiment': 'green'},
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 21), 'volume': 32, 'sentiment': 'green'},
-              {'company': 'Starbucks', 'date': new Date(2018, 8, 22), 'volume': 25, 'sentiment': 'red'}
-            ]
-          },
-          {
-            'company': "Dutch Bros",
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 20},
-              {'date': new Date(2018, 8, 17), 'volume': 10},
-              {'date': new Date(2018, 8, 18), 'volume': 15},
-              {'date': new Date(2018, 8, 19), 'volume': 18},
-              {'date': new Date(2018, 8, 20), 'volume': 10},
-              {'date': new Date(2018, 8, 21), 'volume': 12},
-              {'date': new Date(2018, 8, 22), 'volume': 35},
-              {'date': new Date(2018, 8, 23), 'volume': 10},
-              {'date': new Date(2018, 8, 24), 'volume': 12},
-              {'date': new Date(2018, 8, 25), 'volume': 14}
-            ],
-            'dots': [
-              {'company': "Dutch Bros", 'date': new Date(2018, 8, 19), 'volume': 18, 'sentiment': 'red'},
-              {'company': "Dutch Bros", 'date': new Date(2018, 8, 25), 'volume': 14, 'sentiment': 'red'},
-            ]
-          },
-          {
-            'company': 'Dunkin Donuts',
-            'values': [
-              {'date': new Date(2018, 8, 16), 'volume': 20},
-              {'date': new Date(2018, 8, 17), 'volume': 30},
-              {'date': new Date(2018, 8, 18), 'volume': 25},
-              {'date': new Date(2018, 8, 19), 'volume': 8},
-              {'date': new Date(2018, 8, 20), 'volume': 19},
-              {'date': new Date(2018, 8, 21), 'volume': 14},
-              {'date': new Date(2018, 8, 22), 'volume': 25},
-              {'date': new Date(2018, 8, 23), 'volume': 20},
-              {'date': new Date(2018, 8, 24), 'volume': 19},
-              {'date': new Date(2018, 8, 25), 'volume': 12}
-            ],
-            'dots': [
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 17), 'volume': 30, 'sentiment': 'red'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 20), 'volume': 19, 'sentiment': 'gray'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 21), 'volume': 14, 'sentiment': 'green'},
-              {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 24), 'volume': 19, 'sentiment': 'red'},
-            ]
-          }
-        ]
+        timeSpanData['data'] = [{
+          'company': 'Starbucks',
+          'values': [
+            {'date': new Date(2018, 8, 20), 'volume': 35},
+            {'date': new Date(2018, 8, 21), 'volume': 30},
+            {'date': new Date(2018, 8, 22), 'volume': 14},
+            {'date': new Date(2018, 8, 23), 'volume': 20},
+            {'date': new Date(2018, 8, 24), 'volume': 30},
+            {'date': new Date(2018, 8, 25), 'volume': 15},
+            {'date': new Date(2018, 8, 26), 'volume': 20},
+            {'date': new Date(2018, 8, 27), 'volume': 12}
+          ],
+          'dots': [
+            {'company': 'Starbucks', 'date': new Date(2018, 8, 20), 'volume': 35, 'sentiment': 'green'},
+            {'company': 'Starbucks', 'date': new Date(2018, 8, 24), 'volume': 30, 'sentiment': 'green'},
+            {'company': 'Starbucks', 'date': new Date(2018, 8, 27), 'volume': 12, 'sentiment': 'green'}
+          ]
+        },
+
+        {
+          'company': 'McDonalds',
+          'values': [
+            {'date': new Date(2018, 8, 20), 'volume': 23},
+            {'date': new Date(2018, 8, 21), 'volume': 15},
+            {'date': new Date(2018, 8, 22), 'volume': 42},
+            {'date': new Date(2018, 8, 23), 'volume': 26},
+            {'date': new Date(2018, 8, 24), 'volume': 19},
+            {'date': new Date(2018, 8, 25), 'volume': 26},
+            {'date': new Date(2018, 8, 26), 'volume': 32},
+            {'date': new Date(2018, 8, 27), 'volume': 18}
+          ],
+          'dots': [
+            {'company': 'McDonalds', 'date': new Date(2018, 8, 20), 'volume': 35, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 8, 23), 'volume': 26, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 8, 26), 'volume': 32, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 8, 27), 'volume': 18, 'sentiment': 'green'}
+          ]
+        },
+        {
+          'company': 'Dunkin Donuts',
+          'values': [
+            {'date': new Date(2018, 8, 20), 'volume': 16},
+            {'date': new Date(2018, 8, 21), 'volume': 27},
+            {'date': new Date(2018, 8, 22), 'volume': 24},
+            {'date': new Date(2018, 8, 23), 'volume': 17},
+            {'date': new Date(2018, 8, 24), 'volume': 28},
+            {'date': new Date(2018, 8, 25), 'volume': 16},
+            {'date': new Date(2018, 8, 26), 'volume': 23},
+            {'date': new Date(2018, 8, 27), 'volume': 19}
+          ],
+          'dots': [
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 21), 'volume': 27, 'sentiment': 'green'},
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 25), 'volume': 16, 'sentiment': 'green'},
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 26), 'volume': 23, 'sentiment': 'green'}
+          ]
+        },
+        { 'company': 'Dutch Bros',
+           'values': [
+             {'date': new Date(2018, 8, 20), 'volume': 13},
+             {'date': new Date(2018, 8, 21), 'volume': 40},
+             {'date': new Date(2018, 8, 22), 'volume': 15},
+             {'date': new Date(2018, 8, 23), 'volume': 24},
+             {'date': new Date(2018, 8, 24), 'volume': 16},
+             {'date': new Date(2018, 8, 25), 'volume': 19},
+             {'date': new Date(2018, 8, 26), 'volume': 21},
+             {'date': new Date(2018, 8, 27), 'volume': 31},
+           ],
+           'dots': [
+             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 22), 'volume': 15, 'sentiment': 'green'},
+             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 23), 'volume': 24, 'sentiment': 'green'},
+             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 27), 'volume': 31, 'sentiment': 'green'},
+           ]
+         }
+
+]
         dispatch(receiveTotalVolumeData(timeSpanData));
     }
 }
@@ -172,59 +185,35 @@ export const fetchWordCloudData = (weekStart, weekEnd) => {
       console.log("HERE2")
         //dispatch(requestWordCloudData());
         //let request = client.search(getWordCloudDataRequest(weekStart, weekEnd));
-        let request = [
+          if (weekEnd == 'Starbucks')
           {
-            'title': 'This is the title',
-            'words': [
-              { text: 'Hey', value: 1000 },
-              { text: 'lol', value: 200 },
-              { text: 'first impression', value: 800 },
-              { text: 'very cool', value: 1000000 },
-              { text: 'duck', value: 10 },
-              ]
-          },
-          {
-            'title': 'This is the title',
-            'words': [
-              { text: 'Hey', value: 1000 },
-              { text: 'lol', value: 200 },
-              { text: 'first impression', value: 800 },
-              { text: 'very cool', value: 1000000 },
-              { text: 'duck', value: 10 },
-              ]
-          },
-          {
-            'title': 'This is the title',
-            'words': [
-              { text: 'Hey', value: 1000 },
-              { text: 'lol', value: 200 },
-              { text: 'first impression', value: 800 },
-              { text: 'very cool', value: 1000000 },
-              { text: 'duck', value: 10 },
-              ]
-          },
-          {
-            'title': 'This is the title',
-            'words': [
-              { text: 'Hey', value: 1000 },
-              { text: 'lol', value: 200 },
-              { text: 'first impression', value: 800 },
-              { text: 'very cool', value: 1000000 },
-              { text: 'duck', value: 10 },
-              ]
-          },
-          {
-            'title': 'This is the title',
-            'words': [
-              { text: 'Hey', value: 1000 },
-              { text: 'lol', value: 200 },
-              { text: 'first impression', value: 800 },
-              { text: 'very cool', value: 1000000 },
-              { text: 'duck', value: 10 },
-              ]
+            let request = [
+              {'title': 'We are aware that some people are experiencing issues with the Starbucks App and the Starbucks website this morning. We are working diligently on a fix and hope to have you up and running shortly. Thank you so much for your patience while we get this sorted out.', 'words': [{'text': 'help', 'value': 24188}, {'text': 'Starbucks App', 'value': 52035}, {'text': 'Anthony Thanks', 'value': 21144}, {'text': 'Ryan', 'value': 97029}, {'text': 'rewards', 'value': 76467}, {'text': 'account', 'value': 72341}, {'text': 'look', 'value': 1286}, {'text': 'amazing day', 'value': 59637}, {'text': 'love', 'value': 35067}, {'text': 'happy sipping', 'value': 67333}, {'text': 'issues', 'value': 54812}, {'text': 'patience', 'value': 68210}, {'text': 'feature improvements', 'value': 13175}, {'text': 'email address', 'value': 87318}, {'text': 'things', 'value': 76092}, {'text': 'Steve', 'value': 71385}, {'text': 'kind comments', 'value': 41295}, {'text': 'drive', 'value': 99411}, {'text': 'line', 'value': 84892}, {'text': 'Karie', 'value': 54732}, {'text': 'Stars', 'value': 13456}, {'text': 'company', 'value': 60868}, {'text': 'pleasure', 'value': 5821}]}
+            ]
+            dispatch(recievedWordCloudData(request));
           }
-        ]
-        dispatch(recievedWordCloudData(request));
+          else if (weekEnd == 'Dutch Bros')
+          {
+            let request = [
+              {"title": "Cross something amazing off your bucket list  SIP PEEL WIN today! \n\nNo Purch Nec. US, 13+. Ends 10/15/18 or while supplies last.  For free piece & official rules: http://spr.ly/6011DxPZU .", "words": [{"text": "Sip Peel Win", "value": 49214}, {"text": "year", "value": 23257}, {"text": "large iced coffee", "value": 86700}, {"text": "Patriots offer", "value": 51627}, {"text": "large coffees", "value": 42241}, {"text": "chance", "value": 97165}, {"text": "real prizes", "value": 87170}, {"text": "promotion", "value": 39396}, {"text": "help", "value": 75623}, {"text": "size coffee drink", "value": 23185}, {"text": "Parking lot", "value": 89966}, {"text": "worse RockawayBoulevard Queens", "value": 80926}, {"text": "game piece", "value": 80875}, {"text": "dollar", "value": 46636}, {"text": "spin", "value": 24672}, {"text": "location", "value": 17413}, {"text": "coupon good", "value": 9650}, {"text": "DD i\u2019d", "value": 98009}, {"text": "dunkin giftcard", "value": 41817}, {"text": "reason", "value": 43380}, {"text": "sippeelwin", "value": 16894}, {"text": "GS", "value": 29857}, {"text": "dunkins", "value": 98975}, {"text": "purchase necessary", "value": 45477}, {"text": "info", "value": 36791}, {"text": "Dunks", "value": 85773}, {"text": "Kayla", "value": 14812}, {"text": "right", "value": 12384}, {"text": "disappointment", "value": 79694}, {"text": "Kimberly", "value": 1265}, {"text": "Pls", "value": 6989}, {"text": "link", "value": 69826}, {"text": "junk", "value": 79767}]}
+            ]
+            dispatch(recievedWordCloudData(request));
+          }
+          else {
+            let request = [
+
+                {'title': 'Dutch Bros', 'words': [{'text': 'dutch coffee', 'value': 13227}, {'text': 'dutch Bros', 'value': 88753}, {'text': 'great dollar coffee day', 'value': 28351}, {'text': 'week', 'value': 40611}, {'text': 'caramelizer freeze', 'value': 69493}, {'text': 'whip', 'value': 53871}, {'text': 'money', 'value': 20327}, {'text': 'insides shiny', 'value': 75119}, {'text': 'shiny cold brew', 'value': 15564}, {'text': 'drinks sunshine rebel', 'value': 80300}, {'text': 'couple times', 'value': 65156}, {'text': 'year Cold Brew', 'value': 22488}, {'text': 'Tap', 'value': 53076}, {'text': 'wonderful service', 'value': 98124}, {'text': 'special treat', 'value': 57284}, {'text': 'NJproblems', 'value': 88703}]}
+              ,
+
+                {'title': 'McDonalds', 'words': [{'text': 'BigMac50', 'value': 14193}, {'text': 'ImNotLovinIt', 'value': 50399}, {'text': 'millions of chickens', 'value': 79624}, {'text': 's Big Mac', 'value': 63963}, {'text': 'early internet age', 'value': 486}, {'text': 'MHQ', 'value': 93642}, {'text': 's future', 'value': 29824}, {'text': "mcdonald's breakfast", 'value': 7477}, {'text': 'McDonalds sponsors Fox', 'value': 98172}, {'text': 'best time', 'value': 44142}, {'text': 'secret menu', 'value': 10111}, {'text': 'ice cream right', 'value': 99267}, {'text': 'new Bacon Smokehouse Burger', 'value': 79080}, {'text': 'menu', 'value': 75966}, {'text': 'life', 'value': 12143}, {'text': 'glass bottle', 'value': 35033}]}
+              ,
+
+                {'title': 'Dunkin Donuts', 'words': [{'text': 'Sip Peel Win', 'value': 48070}, {'text': 'year', 'value': 66373}, {'text': 'large iced coffee', 'value': 65858}, {'text': 'Patriots offer', 'value': 76950}, {'text': 'large coffees', 'value': 37934}, {'text': 'chance', 'value': 24445}, {'text': 'real prizes', 'value': 75856}, {'text': 'promotion', 'value': 51200}, {'text': 'help', 'value': 28067}, {'text': 'size coffee drink', 'value': 4029}, {'text': 'Sip Peel Win', 'value': 27544}, {'text': 'year', 'value': 32850}, {'text': 'large iced coffee', 'value': 3801}, {'text': 'Patriots offer', 'value': 90429}, {'text': 'large coffees', 'value': 25494}, {'text': 'chance', 'value': 84989}, {'text': 'real prizes', 'value': 79807}, {'text': 'peel', 'value': 25926}, {'text': 'mins', 'value': 78101}, {'text': 'hold', 'value': 25309}, {'text': 'patented idea', 'value': 40406}, {'text': 'actual idea', 'value': 71045}]}
+
+            ]
+            dispatch(recievedWordCloudData(request));
+          }
+
     }
 }
 
