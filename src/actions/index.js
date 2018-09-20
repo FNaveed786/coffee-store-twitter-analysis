@@ -77,8 +77,8 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
         // });
 
 
-        timeSpanData['startDate'] = new Date(2018, 8, 20)
-        timeSpanData['endDate'] = new Date(2018, 8, 27)
+        timeSpanData['startDate'] = new Date(2018, 7, 20)
+        timeSpanData['endDate'] = new Date(2018, 7, 27)
         timeSpanData['breakouts'] = getDates(timeSpanData['startDate'], timeSpanData['endDate'])
         console.log("START DATE")
         console.log(timeSpanData['startDate'])
@@ -89,74 +89,74 @@ export const fetchTotalVolumeData = (startDate, endDate, company) => {
         timeSpanData['data'] = [{
           'company': 'Starbucks',
           'values': [
-            {'date': new Date(2018, 8, 20), 'volume': 35},
-            {'date': new Date(2018, 8, 21), 'volume': 30},
-            {'date': new Date(2018, 8, 22), 'volume': 14},
-            {'date': new Date(2018, 8, 23), 'volume': 20},
-            {'date': new Date(2018, 8, 24), 'volume': 30},
-            {'date': new Date(2018, 8, 25), 'volume': 15},
-            {'date': new Date(2018, 8, 26), 'volume': 20},
-            {'date': new Date(2018, 8, 27), 'volume': 12}
+            {'date': new Date(2018, 7, 20), 'volume': 35},
+            {'date': new Date(2018, 7, 21), 'volume': 30},
+            {'date': new Date(2018, 7, 22), 'volume': 14},
+            {'date': new Date(2018, 7, 23), 'volume': 20},
+            {'date': new Date(2018, 7, 24), 'volume': 30},
+            {'date': new Date(2018, 7, 25), 'volume': 15},
+            {'date': new Date(2018, 7, 26), 'volume': 20},
+            {'date': new Date(2018, 7, 27), 'volume': 12}
           ],
           'dots': [
-            {'company': 'Starbucks', 'date': new Date(2018, 8, 20), 'volume': 35, 'sentiment': 'green'},
-            {'company': 'Starbucks', 'date': new Date(2018, 8, 24), 'volume': 30, 'sentiment': 'green'},
-            {'company': 'Starbucks', 'date': new Date(2018, 8, 27), 'volume': 12, 'sentiment': 'green'}
+            {'company': 'Starbucks', 'date': new Date(2018, 7, 20), 'volume': 35, 'sentiment': 'green'},
+            {'company': 'Starbucks', 'date': new Date(2018, 7, 24), 'volume': 30, 'sentiment': 'green'},
+            {'company': 'Starbucks', 'date': new Date(2018, 7, 27), 'volume': 12, 'sentiment': 'green'}
           ]
         },
 
         {
           'company': 'McDonalds',
           'values': [
-            {'date': new Date(2018, 8, 20), 'volume': 23},
-            {'date': new Date(2018, 8, 21), 'volume': 15},
-            {'date': new Date(2018, 8, 22), 'volume': 42},
-            {'date': new Date(2018, 8, 23), 'volume': 26},
-            {'date': new Date(2018, 8, 24), 'volume': 19},
-            {'date': new Date(2018, 8, 25), 'volume': 26},
-            {'date': new Date(2018, 8, 26), 'volume': 32},
-            {'date': new Date(2018, 8, 27), 'volume': 18}
+            {'date': new Date(2018, 7, 20), 'volume': 23},
+            {'date': new Date(2018, 7, 21), 'volume': 15},
+            {'date': new Date(2018, 7, 22), 'volume': 42},
+            {'date': new Date(2018, 7, 23), 'volume': 26},
+            {'date': new Date(2018, 7, 24), 'volume': 19},
+            {'date': new Date(2018, 7, 25), 'volume': 26},
+            {'date': new Date(2018, 7, 26), 'volume': 32},
+            {'date': new Date(2018, 7, 27), 'volume': 18}
           ],
           'dots': [
-            {'company': 'McDonalds', 'date': new Date(2018, 8, 20), 'volume': 35, 'sentiment': 'green'},
-            {'company': 'McDonalds', 'date': new Date(2018, 8, 23), 'volume': 26, 'sentiment': 'green'},
-            {'company': 'McDonalds', 'date': new Date(2018, 8, 26), 'volume': 32, 'sentiment': 'green'},
-            {'company': 'McDonalds', 'date': new Date(2018, 8, 27), 'volume': 18, 'sentiment': 'green'}
+            {'company': 'McDonalds', 'date': new Date(2018, 7, 20), 'volume': 35, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 7, 23), 'volume': 26, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 7, 26), 'volume': 32, 'sentiment': 'green'},
+            {'company': 'McDonalds', 'date': new Date(2018, 7, 27), 'volume': 18, 'sentiment': 'green'}
           ]
         },
         {
           'company': 'Dunkin Donuts',
           'values': [
-            {'date': new Date(2018, 8, 20), 'volume': 16},
-            {'date': new Date(2018, 8, 21), 'volume': 27},
-            {'date': new Date(2018, 8, 22), 'volume': 24},
-            {'date': new Date(2018, 8, 23), 'volume': 17},
-            {'date': new Date(2018, 8, 24), 'volume': 28},
-            {'date': new Date(2018, 8, 25), 'volume': 16},
-            {'date': new Date(2018, 8, 26), 'volume': 23},
-            {'date': new Date(2018, 8, 27), 'volume': 19}
+            {'date': new Date(2018, 7, 20), 'volume': 16},
+            {'date': new Date(2018, 7, 21), 'volume': 27},
+            {'date': new Date(2018, 7, 22), 'volume': 24},
+            {'date': new Date(2018, 7, 23), 'volume': 17},
+            {'date': new Date(2018, 7, 24), 'volume': 28},
+            {'date': new Date(2018, 7, 25), 'volume': 16},
+            {'date': new Date(2018, 7, 26), 'volume': 23},
+            {'date': new Date(2018, 7, 27), 'volume': 19}
           ],
           'dots': [
-            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 21), 'volume': 27, 'sentiment': 'green'},
-            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 25), 'volume': 16, 'sentiment': 'green'},
-            {'company': 'Dunkin Donuts', 'date': new Date(2018, 8, 26), 'volume': 23, 'sentiment': 'green'}
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 7, 21), 'volume': 27, 'sentiment': 'green'},
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 7, 25), 'volume': 16, 'sentiment': 'green'},
+            {'company': 'Dunkin Donuts', 'date': new Date(2018, 7, 26), 'volume': 23, 'sentiment': 'green'}
           ]
         },
         { 'company': 'Dutch Bros',
            'values': [
-             {'date': new Date(2018, 8, 20), 'volume': 13},
-             {'date': new Date(2018, 8, 21), 'volume': 40},
-             {'date': new Date(2018, 8, 22), 'volume': 15},
-             {'date': new Date(2018, 8, 23), 'volume': 24},
-             {'date': new Date(2018, 8, 24), 'volume': 16},
-             {'date': new Date(2018, 8, 25), 'volume': 19},
-             {'date': new Date(2018, 8, 26), 'volume': 21},
-             {'date': new Date(2018, 8, 27), 'volume': 31},
+             {'date': new Date(2018, 7, 20), 'volume': 13},
+             {'date': new Date(2018, 7, 21), 'volume': 40},
+             {'date': new Date(2018, 7, 22), 'volume': 15},
+             {'date': new Date(2018, 7, 23), 'volume': 24},
+             {'date': new Date(2018, 7, 24), 'volume': 16},
+             {'date': new Date(2018, 7, 25), 'volume': 19},
+             {'date': new Date(2018, 7, 26), 'volume': 21},
+             {'date': new Date(2018, 7, 27), 'volume': 31},
            ],
            'dots': [
-             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 22), 'volume': 15, 'sentiment': 'green'},
-             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 23), 'volume': 24, 'sentiment': 'green'},
-             {'company': 'Dutch Bros', 'date': new Date(2018, 8, 27), 'volume': 31, 'sentiment': 'green'},
+             {'company': 'Dutch Bros', 'date': new Date(2018, 7, 22), 'volume': 15, 'sentiment': 'green'},
+             {'company': 'Dutch Bros', 'date': new Date(2018, 7, 23), 'volume': 24, 'sentiment': 'green'},
+             {'company': 'Dutch Bros', 'date': new Date(2018, 7, 27), 'volume': 31, 'sentiment': 'green'},
            ]
          }
 
@@ -201,7 +201,8 @@ export const fetchWordCloudData = (weekStart, weekEnd) => {
           }
           else {
             let request = [
-
+              {'title': 'Starbucks', 'words': [{'text': 'pink fluffy unicorns', 'value': 79499}, {'text': 'pink fluffy uncorns', 'value': 52908}, {'text': 'Unicorn Frappuccinos', 'value': 4773}, {'text': 'small group', 'value': 58049}, {'text': 'lot', 'value': 20608}, {'text': 'yesss', 'value': 27319}, {'text': 'kids', 'value': 86878}, {'text': 'acceptVIACOIN', 'value': 65885}, {'text': 'Fluuuffffyyyyy', 'value': 59848}, {'text': 'drink', 'value': 44421}, {'text': 'Iced Vanilla Bean Coconutmilk Latte', 'value': 69254}, {'text': 'Starbucks location', 'value': 72568}, {'text': 'creation method', 'value': 40824}, {'text': 'love', 'value': 45321}, {'text': 'loving military spouses', 'value': 30765}, {'text': 'sacrifices military spouses', 'value': 12282}]}
+              ,
                 {'title': 'Dutch Bros', 'words': [{'text': 'dutch coffee', 'value': 13227}, {'text': 'dutch Bros', 'value': 88753}, {'text': 'great dollar coffee day', 'value': 28351}, {'text': 'week', 'value': 40611}, {'text': 'caramelizer freeze', 'value': 69493}, {'text': 'whip', 'value': 53871}, {'text': 'money', 'value': 20327}, {'text': 'insides shiny', 'value': 75119}, {'text': 'shiny cold brew', 'value': 15564}, {'text': 'drinks sunshine rebel', 'value': 80300}, {'text': 'couple times', 'value': 65156}, {'text': 'year Cold Brew', 'value': 22488}, {'text': 'Tap', 'value': 53076}, {'text': 'wonderful service', 'value': 98124}, {'text': 'special treat', 'value': 57284}, {'text': 'NJproblems', 'value': 88703}]}
               ,
 
